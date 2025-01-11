@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body  {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  background-color: #333;
+  color: #222;
+  overflow-x: hidden;
+}
+
+.container.show-nav + nav li  {
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+
+.container.show-nav .circle  {
+  transform: rotate(-70deg);
+}
+
+nav {
+  position: fixed;
+  bottom: 8%;
+  left: 0;
+}
+
+nav ul  {
+  list-style: none;
+  padding-left: 30px;
+}
+
+nav ul li {
+  text-transform: uppercase;
+  color: white;
+  margin: 40px 0px;
+  transform: translateX(-100%); /* moves the lists on the x-axis */
+  transition: transform 0.4s ease;
+}
+
+nav ul li i { /* change icon properties */
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+nav ul li + li {  /* targets the list after the first list */
+  margin-left: 15px;
+  transform: translateX(-150%);
+}
+
+nav ul li + li +li {
+  margin-left: 30px;
+  transform: translateX(-200%);
+}
+
+.container  {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 50px;
+  background-color: white;
+  transform-origin: top left; /* change origin from center to top left so it rotates
+  from the top left corner */
+  transition: transform 0.5s linear;
+}
+
+.content  {
+  margin: 50px auto;
+  max-width: 1000px;
+}
+
+.container.show-nav {
+  transform: rotate(-20deg);
+}
+
+.circle-container  {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+
+.circle {
+  background-color: rgb(216, 98, 14);
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.5s linear;
+}
+
+.circle button  {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  border: 0;
+  background: transparent; /* hides background of buttons */
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.circle button#open {
+  left: 60%;
+}
+
+.circle button#close  {
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+
+img {
+ max-width: 100%;
+}
+
+.content p {
+  line-height: 1.5;
+}

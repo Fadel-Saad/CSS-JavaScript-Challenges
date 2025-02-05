@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body  {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: blueviolet;
+}
+
+.search {
+  height: 50px;
+  position: relative;
+}
+
+.btn i  {
+  font-size: 25px;
+}
+
+button  {
+  
+  cursor: pointer;
+  background-color: white;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-style: none;
+  transition: transform 0.6s ease;
+  /* transitions are added to the main element & not the class added
+  so that the transition occurs when adding or removing the class */
+}
+
+.input  {
+  outline-style: none;
+  border-style: none;
+  background-color: white;
+  font-size: 18px;
+  height: 50px;
+  width: 50px; 
+  padding: 10px;
+  transition: width 0.6s ease;
+  /* transitions are added to the main element & not the class added
+  so that the transition occurs when adding or removing the class */
+}
+
+.activated  {
+  width: 300px;
+}
+
+.activated-button {
+  transform: translateX(250px);
+}
+
+
+
